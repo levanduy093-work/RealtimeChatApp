@@ -11,6 +11,12 @@
 		CCC67A6E2B0FA80800317158 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC67A6D2B0FA80800317158 /* ContentView.swift */; };
 		CCC67A702B0FA80A00317158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCC67A6F2B0FA80A00317158 /* Assets.xcassets */; };
 		CCC67A732B0FA80A00317158 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCC67A722B0FA80A00317158 /* Preview Assets.xcassets */; };
+		CCC67A7A2B0FA97600317158 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC67A792B0FA97600317158 /* LoginView.swift */; };
+		CCC67A7D2B0FAE3B00317158 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC67A7C2B0FAE3B00317158 /* View+Extension.swift */; };
+		CCC67A7F2B0FAED200317158 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC67A7E2B0FAED200317158 /* TextFieldModifier.swift */; };
+		CCC67A9C2B0FDEC100317158 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC67A9B2B0FDEC100317158 /* RegisterView.swift */; };
+		CCC67A9E2B0FECED00317158 /* AddEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC67A9D2B0FECED00317158 /* AddEmailView.swift */; };
+		CCC67AA02B0FF05200317158 /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC67A9F2B0FF05200317158 /* CreatePasswordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		CCC67A6D2B0FA80800317158 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CCC67A6F2B0FA80A00317158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCC67A722B0FA80A00317158 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CCC67A792B0FA97600317158 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CCC67A7C2B0FAE3B00317158 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		CCC67A7E2B0FAED200317158 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		CCC67A9B2B0FDEC100317158 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		CCC67A9D2B0FECED00317158 /* AddEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailView.swift; sourceTree = "<group>"; };
+		CCC67A9F2B0FF05200317158 /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +63,9 @@
 		CCC67A6A2B0FA80800317158 /* RealTimeChat */ = {
 			isa = PBXGroup;
 			children = (
-				CCC67A6B2B0FA80800317158 /* RealTimeChatApp.swift */,
+				CCC67AA12B1064E600317158 /* App */,
+				CCC67AA22B1064EB00317158 /* Core */,
+				CCC67A7B2B0FAE2D00317158 /* Extensions */,
 				CCC67A6D2B0FA80800317158 /* ContentView.swift */,
 				CCC67A6F2B0FA80A00317158 /* Assets.xcassets */,
 				CCC67A712B0FA80A00317158 /* Preview Content */,
@@ -65,6 +79,42 @@
 				CCC67A722B0FA80A00317158 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CCC67A7B2B0FAE2D00317158 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CCC67A7C2B0FAE3B00317158 /* View+Extension.swift */,
+				CCC67A7E2B0FAED200317158 /* TextFieldModifier.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CCC67A9A2B0FD85B00317158 /* Login&Register */ = {
+			isa = PBXGroup;
+			children = (
+				CCC67A792B0FA97600317158 /* LoginView.swift */,
+				CCC67A9B2B0FDEC100317158 /* RegisterView.swift */,
+				CCC67A9D2B0FECED00317158 /* AddEmailView.swift */,
+				CCC67A9F2B0FF05200317158 /* CreatePasswordView.swift */,
+			);
+			path = "Login&Register";
+			sourceTree = "<group>";
+		};
+		CCC67AA12B1064E600317158 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CCC67A6B2B0FA80800317158 /* RealTimeChatApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CCC67AA22B1064EB00317158 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CCC67A9A2B0FD85B00317158 /* Login&Register */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +187,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCC67A7A2B0FA97600317158 /* LoginView.swift in Sources */,
+				CCC67A7F2B0FAED200317158 /* TextFieldModifier.swift in Sources */,
 				CCC67A6E2B0FA80800317158 /* ContentView.swift in Sources */,
+				CCC67A9E2B0FECED00317158 /* AddEmailView.swift in Sources */,
+				CCC67A9C2B0FDEC100317158 /* RegisterView.swift in Sources */,
+				CCC67AA02B0FF05200317158 /* CreatePasswordView.swift in Sources */,
+				CCC67A7D2B0FAE3B00317158 /* View+Extension.swift in Sources */,
 				CCC67A6C2B0FA80800317158 /* RealTimeChatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
