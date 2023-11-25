@@ -10,7 +10,8 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
-    
+    @EnvironmentObject var viewModel: AuthViewModel
+        
     var body: some View {
         NavigationStack {
             VStack {
@@ -26,6 +27,7 @@ struct LoginView: View {
                 
                 // Signin Infor
                 TextField("Nhập Email", text: $email)
+                    .keyboardType(.emailAddress)
                     .autocapitalization(.none)
                     .padding(.leading, 10)
                     .modifier(TextFieldModifier())
@@ -38,7 +40,7 @@ struct LoginView: View {
                 
                 // Forget password button action
                 Button(action: {
-                    
+                    print("Forget password...")
                 }, label: {
                     Text("Forgot Password")
                         .hSpacing(.trailing)
@@ -50,7 +52,9 @@ struct LoginView: View {
                 
                 // Login Button
                 Button(action: {
-                    
+                    Task {
+                        try await viewModel.signIn(withEmail: email, password: password)
+                    }
                 }, label: {
                     Text("Login")
                         .font(.subheadline)
@@ -60,6 +64,8 @@ struct LoginView: View {
                         .background(Color(.brandGreen))
                         .cornerRadius(20)
                 })
+                .disabled(!formIsValid)
+                .opacity(formIsValid ? 1.0 : 0.5)
                 
                 Spacer()
                 
@@ -80,6 +86,17 @@ struct LoginView: View {
             .background(.brandBlue)
         }
     }
+}
+
+//  MARK: AuthenticationFormProtocol
+extension LoginView: AuthenticationFormProtocol {
+    var formIsValid: Bool {
+        return !email.isEmpty
+        && email.contains("@")
+        && !password.isEmpty
+        && password.count > 5
+    }
+
 }
 
 #Preview {
